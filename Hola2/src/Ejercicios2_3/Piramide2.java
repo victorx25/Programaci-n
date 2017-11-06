@@ -1,28 +1,28 @@
 package Ejercicios2_3;
 
-import java.util.Scanner;
 
 public class Piramide2 {
 
-	public static void Piramide(int tamano) {
+	public static String piramide2(int num) {
 
+		String piramide2 = Integer.toString(num);
+		
+		int tamano = Integer.parseInt(piramide2);
 		
 		for(int i = 1; i <= tamano; i++){
-		int i2;
-		for(i2 = 0; i2 < tamano - i; i2++)
-		{
-		System.out.print(" "); //imprime los espacios
-		}
-		for( ; i2 < tamano ; i2++)
-		{
-		System.out.print(" *"); //imprime los asteriscos
-		}
-		System.out.println(""); //cambio de lienea 
-	}
+		int n;
+			for( n = 0; n < tamano-i ; n++){
+				System.out.print(" "); //imprime los espacios
+				}
+					for( ; n < (tamano+i)-1;n++){
+						System.out.print("*"); //imprime los asteriscos
+					}
+			System.out.println(); //cambio de lienea 
+			}
+		return piramide2;
 	}	
-		public static void main(String argumentos[])
-		{
-			Piramide(5);
-			
+	public static void main(String[] args) {
+		
+		piramide2(5);
 	}
 }

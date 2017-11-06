@@ -1,34 +1,26 @@
 package Ejercicios2_3;
 
+
 public class Rombo2 {
 
+	public static void rombo(int tamano) {
 
-		public static void Rombo(int tamaño) {
-
-			int x;
-			int y;
-			int z;
-			
-			for (y = 1; y <= tamaño; y++) { 
-				System.out.println("");
-			
-			for (z = 1; z <= tamaño; z++) {
-			
-			if (y == tamaño/2) {
-				System.out.print("*");
-			}
-			
-			else if ((z == tamaño) || (y == tamaño)) 
-						System.out.print(" *");
-			else { System.out.print("  ");}
-			}
-			}
-					
+		if (tamano % 2 == 0) {
+			tamano = tamano + 1 ;
 		}
-			public static void main(String argumentos[])
-			{
-				Rombo(5);
-				
-		}
-	
+		for(int i = 1; i <= tamano; i++){
+		int n;
+			for( n = 0; n < tamano - i ; n++){
+				System.out.print(" "); //imprime los espacios
+				}
+					for( ; n < (tamano+i)-1;n++){
+						System.out.print("*"); //imprime los asteriscos
+					}
+			System.out.println(); //cambio de lienea 
+			}
+	}	
+	public static void main(String[] args) {
+		
+		rombo(6);
+	}
 }
