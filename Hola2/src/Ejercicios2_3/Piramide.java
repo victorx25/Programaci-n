@@ -4,35 +4,25 @@ import java.util.Scanner;
 
 public class Piramide {
 
-	public static void Piramide(int tamaño) {
+	public static void main(String argumentos[]) {
 
-		int x;
-		int y;
+		Scanner teclado = new Scanner(System.in);
 		
-		do {
-		for (x = 1; x <= tamaño; x++) { 
-			System.out.println("");
+		int tamano;
+		System.out.println("dime el tamano que desees: ");
+		tamano = teclado.nextInt();
 		
-		for (y = 1; y <= tamaño; y++) {
-		
-		if (x == 1 && y == tamaño / 2) System.out.print(" *");
-		
-		else if ((x == tamaño) || (y == tamaño)) {
-			System.out.print(" *");
-
-		}
-		else {
-			System.out.print(" *");
-
-					}
-				}
-			}
-		}while (x!=tamaño);
-	}
-		
-		public static void main(String argumentos[])
+		for(int i = 1; i <= tamano; i++){
+		int i2;
+		for(i2 = 0; i2 < tamano - i; i2++)
 		{
-			Piramide(5);
-			
+		System.out.print(" "); //imprime los espacios
+		}
+		for( ; i2 < tamano ; i2++)
+		{
+		System.out.print("**"); //imprime los asteriscos
+		}
+		System.out.println(""); //cambio de lienea 
 	}
+	}	
 }

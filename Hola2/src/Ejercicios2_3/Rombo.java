@@ -1,34 +1,44 @@
 package Ejercicios2_3;
 
+import java.util.Scanner;
+
 public class Rombo {
 
 
-		public static void Rombo(int tamaño) {
+	public static void main(String argumentos[]){
 
-			int x;
-			int y;
-			int z;
+
+			Scanner teclado = new Scanner(System.in);
 			
-			for (y = 1; y <= tamaño; y++) { 
-				System.out.println("");
+			int tamano;
+			System.out.println("dime el tamano que desees: ");
+			tamano = teclado.nextInt();
 			
-			for (z = 1; z <= tamaño; z++) {
-			
-			if (y == tamaño/2) {
-				System.out.print("*");
-			}
-			
-			else if ((z == tamaño) || (y == tamaño)) 
-						System.out.print(" *");
-			else { System.out.print("  ");}
-			}
-			}
-					
-		}
-			public static void main(String argumentos[])
+			for(int i = 1; i <= tamano; i++){
+			int i2;
+			for(i2 = 0; i2 < tamano - i; i2++)
 			{
-				Rombo(5);
-				
-		}
-	
+			System.out.print(" "); //imprime los espacios
+			}
+			for( ; i2 < tamano ; i2++)
+			{
+			System.out.print(" *"); //imprime los asteriscos
+			}
+			System.out.println(""); //cambio de lienea 
+			}	
+			
+			for(int i = 1; i <= tamano; i++){
+				int i2;
+				for(i2 = 0; i2 < tamano - i; i2++)
+				{
+				System.out.print(" *"); //imprime los espacios
+				}
+				for( ; i2 < tamano ; i2++)
+				{
+				System.out.print(""); //imprime los asteriscos
+				}
+				System.out.println(""); //cambio de lienea 
+				}
+			
+}
 }
