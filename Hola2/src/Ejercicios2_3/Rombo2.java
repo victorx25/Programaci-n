@@ -3,24 +3,35 @@ package Ejercicios2_3;
 
 public class Rombo2 {
 
-	public static void rombo(int tamano) {
+	public static String rombo(int num) {
 
-		if (tamano % 2 == 0) {
-			tamano = tamano + 1 ;
-		}
+String rombo2 = Integer.toString(num);
+		
+		int tamano = Integer.parseInt(rombo2);
+		
+		tamano = (tamano + 1) / 2;
 		for(int i = 1; i <= tamano; i++){
 		int n;
-			for( n = 0; n < tamano - i ; n++){
-				System.out.print(" "); //imprime los espacios
-				}
-					for( ; n < (tamano+i)-1;n++){
-						System.out.print("*"); //imprime los asteriscos
-					}
-			System.out.println(); //cambio de lienea 
+		for( n = 0; n < tamano - i ; n++){
+			System.out.print(" "); //imprime los espacios
 			}
-	}	
+		for( ; n < (tamano + i) - 1;n++){
+			System.out.print("*"); //imprime los asteriscos
+			}
+			System.out.println(); //cambio de lienea 
+		}
+		for (int i = tamano - 1; i >= 1; i--){
+		for (int n = tamano - i; n > 0; n--)
+		System.out.print(" ");
+		for (int m = 1; m < 2 * i; m++)
+		System.out.print("*");
+		System.out.println("");
+		}
+		return rombo2;
+	}
+			
 	public static void main(String[] args) {
 		
-		rombo(6);
+		rombo(8);
 	}
 }
